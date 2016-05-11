@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int fibonacci (int n){
+    if (n==0){
+      return 0;
+    }
+    if(n==1){
+      return 1;
+    }
+    return fibonacci(n-2)+fibonacci(n-1);
+  }
+
+int main(){
+  int n;
+  cout<<"dime el numero de la serie que quieres saber de la Serie Fibonacci, recuerda que no existen numeros negativos"<<endl;
+  cin>>n;
+  if (n<0){
+    cout<<"ERROR, SOLO NUMEROS POSITIVOS.";
+  }
+  else {
+    cout<<"El numero "<< n << " de la serie, es: "<< fibonacci(n)<< endl;
+  }
+  return 0;
+}
